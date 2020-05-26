@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.Entities", "CarConstructorGame.Entities\CarConstructorGame.Entities.csproj", "{03D8083F-6A6B-4269-98AE-F82376F54D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.Common", "CarConstructorGame.Common\CarConstructorGame.Common.csproj", "{75FE87F0-3FF3-4D30-862D-2563B71C59BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.DAL.Abstract", "CarConstructorGame.DAL.Abstract\CarConstructorGame.DAL.Abstract.csproj", "{3CAB3313-D1CF-404A-8926-4C3DD95608AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.DAL.Implementation", "CarConstructorGame.DAL.Implementation\CarConstructorGame.DAL.Implementation.csproj", "{208659A2-5003-4594-AA75-16587D6B1AB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.UI", "CarConstructorGame.UI\CarConstructorGame.UI.csproj", "{A72F7815-BDDE-4510-AC26-6EC2345964B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03D8083F-6A6B-4269-98AE-F82376F54D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D8083F-6A6B-4269-98AE-F82376F54D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D8083F-6A6B-4269-98AE-F82376F54D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D8083F-6A6B-4269-98AE-F82376F54D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75FE87F0-3FF3-4D30-862D-2563B71C59BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75FE87F0-3FF3-4D30-862D-2563B71C59BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75FE87F0-3FF3-4D30-862D-2563B71C59BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75FE87F0-3FF3-4D30-862D-2563B71C59BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CAB3313-D1CF-404A-8926-4C3DD95608AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CAB3313-D1CF-404A-8926-4C3DD95608AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CAB3313-D1CF-404A-8926-4C3DD95608AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CAB3313-D1CF-404A-8926-4C3DD95608AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{208659A2-5003-4594-AA75-16587D6B1AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{208659A2-5003-4594-AA75-16587D6B1AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{208659A2-5003-4594-AA75-16587D6B1AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{208659A2-5003-4594-AA75-16587D6B1AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72F7815-BDDE-4510-AC26-6EC2345964B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72F7815-BDDE-4510-AC26-6EC2345964B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72F7815-BDDE-4510-AC26-6EC2345964B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72F7815-BDDE-4510-AC26-6EC2345964B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8AD32A0-C50B-4068-88CB-844A0528D6C9}
+	EndGlobalSection
+EndGlobal
