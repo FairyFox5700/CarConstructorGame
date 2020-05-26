@@ -9,7 +9,7 @@ namespace CarConstructorGame.DAL.Abstract
     public interface IRepository<TEntity,TKey> where TEntity : BaseEntity<TKey>
     {
         //TODO Add pagination
-        Task<TEntity> GetAll();
+        Task<IEnumerable<TEntity>> GetAll();
         Task<TEntity> GetById(TKey id);
         void Add(TEntity entity);
         void Update(TEntity entity);
