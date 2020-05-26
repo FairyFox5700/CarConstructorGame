@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CarConstructorGame.DAL.Abstract\CarConstructorGame.DAL.Abstract.csproj" />
     <ProjectReference Include="..\CarConstructorGame.Entities\CarConstructorGame.Entities.csproj" />
   </ItemGroup>
 
