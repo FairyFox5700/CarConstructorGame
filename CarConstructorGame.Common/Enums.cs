@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CarConstructorGame.Entities.Enums
+namespace CarConstructorGame.Common
 {
     public class Enums
     {

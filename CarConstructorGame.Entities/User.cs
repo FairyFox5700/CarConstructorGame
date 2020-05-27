@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using static CarConstructorGame.Entities.Enums.Enums;
+using static CarConstructorGame.Common.Enums;
 
 namespace CarConstructorGame.Entities
 {

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CarConstructorGame.DAL.Implementation.Extensions
 {
-    public static class DALResolver
+    public static class DAlResolver
     {
         public static void ResoveDAL(this IServiceCollection serviceCollection)
         {

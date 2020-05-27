@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.DAL.Impl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.UI", "CarConstructorGame.UI\CarConstructorGame.UI.csproj", "{A72F7815-BDDE-4510-AC26-6EC2345964B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.Models", "CarConstructorGame.Models\CarConstructorGame.Models.csproj", "{5371B433-B723-4EB3-AE39-7BA873D446DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A72F7815-BDDE-4510-AC26-6EC2345964B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A72F7815-BDDE-4510-AC26-6EC2345964B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A72F7815-BDDE-4510-AC26-6EC2345964B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5371B433-B723-4EB3-AE39-7BA873D446DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5371B433-B723-4EB3-AE39-7BA873D446DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5371B433-B723-4EB3-AE39-7BA873D446DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5371B433-B723-4EB3-AE39-7BA873D446DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

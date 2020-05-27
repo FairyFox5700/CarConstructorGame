@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CarConstructorGame.Common
+namespace CarConstructorGame.Models
 {
     public class Class1
     {

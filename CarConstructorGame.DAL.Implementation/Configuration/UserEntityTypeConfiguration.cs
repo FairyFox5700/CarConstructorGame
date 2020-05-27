@@ -3,9 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using static CarConstructorGame.Entities.Enums.Enums;
+using static CarConstructorGame.Common.Enums;
 
 namespace CarConstructorGame.DAL.Implementation.Configuration
 {
@@ -21,18 +19,20 @@ namespace CarConstructorGame.DAL.Implementation.Configuration
             builder.Property(m => m.Id)
                 .ValueGeneratedOnAdd()
                 .HasColumnName("UserId");
-         
-           
+
+
             builder.Property(m => m.MoneySum)
-                 .HasColumnType("money").IsRequired(); ;
+                 .HasColumnType("money").IsRequired(); 
 
             builder.Property(m => m.UserName)
                 .HasMaxLength(50).IsRequired();
+            builder.HasIndex(u => u.UserName)
+            .IsUnique();
 
 
             builder.Property(m => m.GameRating)
                 .HasConversion(converter);
-            builder.OwnsOne(m => m.Age).Property(a => a.Value).HasDefaultValue(10); 
+            builder.OwnsOne(m => m.Age).Property(a => a.Value).HasDefaultValue(10);
 
 
             builder.ToTable("Users");

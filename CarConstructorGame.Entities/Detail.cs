@@ -1,4 +1,4 @@
-﻿using static CarConstructorGame.Entities.Enums.Enums;
+﻿using static CarConstructorGame.Common.Enums;
 
 namespace CarConstructorGame.Entities
 {
@@ -11,6 +11,6 @@ namespace CarConstructorGame.Entities
         public Car Car { get; set; }
         public DetailType DetailType { get; set; }
         public double ExpluatationStabilityCoef { get; set; }
-       
+
     }
 }

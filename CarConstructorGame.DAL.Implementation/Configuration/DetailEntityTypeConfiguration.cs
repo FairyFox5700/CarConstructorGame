@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
-using static CarConstructorGame.Entities.Enums.Enums;
+using static CarConstructorGame.Common.Enums;
 
 namespace CarConstructorGame.DAL.Implementation.Configuration
 {
@@ -22,8 +22,8 @@ namespace CarConstructorGame.DAL.Implementation.Configuration
             builder.HasDiscriminator(m => m.DetailType)
         .HasValue<Engine>(DetailType.Engine)
         .HasValue<Accamulator>(DetailType.Accamulator)
-        .HasValue<RimsComplect>(DetailType.RimsComplect); 
-            builder.Property(m => m.ExpluatationStabilityCoef);
+        .HasValue<RimsComplect>(DetailType.RimsComplect);
+            builder.Property(m => m.ExpluatationStabilityCoef).IsRequired();
             builder.Property(m => m.IsSuitableForRepairing).
                 HasDefaultValue(true);
             builder.Property(m => m.RepairPrice)
