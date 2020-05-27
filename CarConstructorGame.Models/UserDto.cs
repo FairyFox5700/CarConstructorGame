@@ -37,6 +37,30 @@ namespace CarConstructorGame.Models
                 };
             }
         }
+
+        public static Expression<Func<UserDto, User>> ProjectionToEntity
+        {
+            get
+            {
+                return x => new User()
+                {
+                    Id = x.UserId,
+                    UserName = x.UserName,
+                    GameRating = x.GameRating,
+                    MoneySum = x.TotalSum,
+                    ///Age.Value  = x.UserAge,value object????
+                    //UserCars = x.Cars.AsQueryable().Select(CarDto.Projection)
+                };
+            }
+        }
+        public static UserDto FromUserEntity(User entity)
+        {
+            return Projection.Compile().Invoke(entity);
+        }
+        public static User FromUserDto(UserDto user)
+        {
+            return ProjectionToEntity.Compile().Invoke(user);
+        }
     }
 
 }

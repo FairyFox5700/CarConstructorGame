@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using static CarConstructorGame.Common.Enums;
 
 namespace CarConstructorGame.Entities
@@ -10,5 +12,7 @@ namespace CarConstructorGame.Entities
         public GameRating GameRating { get; set; }
         public ICollection<Car> Cars { get; set; }
         public Age Age { get; set; }
+
+        
     }
 }

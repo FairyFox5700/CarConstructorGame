@@ -13,5 +13,6 @@ namespace CarConstructorGame.DAL.Abstract
         Task RollbackAsync();
         public IUserRepository UserRepository { get; }
         public ICarRepository CarRepository { get;  }
+        public ICarDetailsRepository CarDetailsRepository { get; }
     }
 }

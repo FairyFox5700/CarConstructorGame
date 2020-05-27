@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CarConstructorGame.BLL.Abstract\CarConstructorGame.BLL.Abstract.csproj" />
+    <ProjectReference Include="..\CarConstructorGame.DAL.Abstract\CarConstructorGame.DAL.Abstract.csproj" />
+  </ItemGroup>
+
 </Project>

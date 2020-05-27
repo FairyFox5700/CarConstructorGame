@@ -10,10 +10,11 @@ namespace CarConstructorGame.DAL.Implementation.Core
     //TODO implement methods for transaction properly
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        public UnitOfWork(IUserRepository userRepository, ICarRepository carRepository, CarGameContext context)
+        public UnitOfWork(IUserRepository userRepository, ICarRepository carRepository, ICarDetailsRepository carDetailsRepository, CarGameContext context)
         {
             UserRepository = userRepository;
             CarRepository = carRepository;
+            CarDetailsRepository = carDetailsRepository;
             this.context = context;
         }
         private IDbContextTransaction transaction;
@@ -21,6 +22,8 @@ namespace CarConstructorGame.DAL.Implementation.Core
         public IUserRepository UserRepository { get; }
        
         public ICarRepository CarRepository { get; }
+
+        public ICarDetailsRepository CarDetailsRepository { get; }
 
         public async  Task CommitAsync()
         {
