@@ -22,6 +22,7 @@ namespace CarConstructorGame.UI
         {
            
             serviceCollection.ResoveDAL();
+            //serviceCollection.AddTransient<>
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {

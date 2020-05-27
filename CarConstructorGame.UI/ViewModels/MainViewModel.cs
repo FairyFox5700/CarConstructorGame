@@ -7,16 +7,16 @@ using System.Windows.Input;
 
 namespace CarConstructorGame.UI.ViewModels
 {
-    public class MainViewModel:BaseViewModel, IPageViewModel
+    public class MainViewModel:BaseViewModel
     {
         private ILoginService loginService;
-        public MainViewModel(ILoginService loginService)
+        public INavigator Navigator { get; set; }
+        
+        public MainViewModel(INavigator navigator, ILoginService loginService)
         {
+            Navigator = navigator;
             this.loginService = loginService;
-        }
-        public MainViewModel()
-        {
-
+            Navigator.UpdateCurrentViewModelCommand.Execute(ViewType.CarView);
         }
 
         private ICommand goToLoginView;
@@ -40,5 +40,7 @@ namespace CarConstructorGame.UI.ViewModels
                 return goToCarDetailView;
             }
         }
+
+      
     }
 }

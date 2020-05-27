@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <None Remove="Resources\carMainBackground.jfif" />
-    <None Remove="Views\CarItemDetailView" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,12 +26,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Include="Views\CarItemDetailView" />
+    <ProjectReference Include="..\CarConstructorGame.BLL.Abstract\CarConstructorGame.BLL.Abstract.csproj" />
+    <ProjectReference Include="..\CarConstructorGame.DAL.Implementation\CarConstructorGame.DAL.Implementation.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarConstructorGame.BLL.Abstract\CarConstructorGame.BLL.Abstract.csproj" />
-    <ProjectReference Include="..\CarConstructorGame.DAL.Implementation\CarConstructorGame.DAL.Implementation.csproj" />
+    <Folder Include="Новая папка\" />
   </ItemGroup>
 
 </Project>
