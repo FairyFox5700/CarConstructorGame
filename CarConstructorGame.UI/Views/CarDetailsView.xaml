@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="CarConstructorGame.UI.Views.CarDetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CarConstructorGame.UI.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ImageBrush  x:Key="backgrounBrush" ImageSource="\Resources\carMainBackground.jfif" Stretch="UniformToFill"/>
+    </UserControl.Resources>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch"  Background="{StaticResource backgrounBrush}" >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListView  Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Background="Transparent" Height="Auto" >
+                <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                    <materialDesign:Card  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"   >
+                        <Grid Background="#FF3A0014" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition  Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Source="{Binding Path=ImagePath}" MinHeight="50"  MinWidth="30" Stretch="UniformToFill" Margin="0,0,2,0" >
+                            </Image>
+                            <TextBlock FontWeight="Bold" Grid.Row="1" HorizontalAlignment="Left" MinWidth="100" Height="Auto" Width="Auto" 
+                                   FontFamily="Lucida Sans Unicode" FontSize="12" Foreground="White" Text="{Binding Path=DetaiType}">
+                            </TextBlock>
+                            <TextBlock FontWeight="Bold" Grid.Row="2" HorizontalAlignment="Right"  MinWidth="100" Height="Auto" Foreground="White" 
+                                       Text="{Binding Path=PriceToBuy}">
+                            </TextBlock>
+                        </Grid>
+                    </materialDesign:Card>
+                </StackPanel>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="4" HorizontalAlignment="Stretch"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ListView>
+        </Grid>
+
+
+        <Grid  Grid.Row="1"  Grid.Column="2" Background="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock  Grid.Column="0" Grid.Row="0" Text="{Binding StringFormat=Current balance {0} $,  Path=CurrentBalance}" Background="White" TextAlignment="Center">
+            </TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="1" Text="Шось ще тут" Background="White" TextAlignment="Center">
+            </TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="3" Text="{Binding StringFormat=Total distance {0} in metres,  Path=CurrentBalance}" Background="White" TextAlignment="Center">
+            </TextBlock>
+            <Button Grid.Column="1" Grid.Row="3" Content="Login">
+            </Button>
+        </Grid>
+        <StackPanel Grid.RowSpan="2"  Grid.Column="0" Background="Black" Orientation="Vertical"   Width="Auto" Height="Auto" >
+            <Button  Width="Auto" Height="40" Content="All engines" Background="Wheat"  BorderBrush="Transparent" 
+                Command="{Binding DataContext.GoToAddRecipe, Mode=OneWay}"/>
+            <Button  Width="Auto" Height="40" Content="All rims" Background="Wheat"  BorderBrush="Transparent" 
+                Command="{Binding DataContext.GoToAddRecipe, Mode=OneWay}"/>
+            <Button  Width="Auto" Height="40" Content="All acamulators" Background="Wheat"  BorderBrush="Transparent" 
+                Command="{Binding DataContext.GoToAddRecipe, Mode=OneWay}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

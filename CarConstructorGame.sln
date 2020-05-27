@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.Entities", "CarConstructorGame.Entities\CarConstructorGame.Entities.csproj", "{03D8083F-6A6B-4269-98AE-F82376F54D83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarConstructorGame.Entities", "CarConstructorGame.Entities\CarConstructorGame.Entities.csproj", "{03D8083F-6A6B-4269-98AE-F82376F54D83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.Common", "CarConstructorGame.Common\CarConstructorGame.Common.csproj", "{75FE87F0-3FF3-4D30-862D-2563B71C59BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarConstructorGame.Common", "CarConstructorGame.Common\CarConstructorGame.Common.csproj", "{75FE87F0-3FF3-4D30-862D-2563B71C59BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.DAL.Abstract", "CarConstructorGame.DAL.Abstract\CarConstructorGame.DAL.Abstract.csproj", "{3CAB3313-D1CF-404A-8926-4C3DD95608AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarConstructorGame.DAL.Abstract", "CarConstructorGame.DAL.Abstract\CarConstructorGame.DAL.Abstract.csproj", "{3CAB3313-D1CF-404A-8926-4C3DD95608AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.DAL.Implementation", "CarConstructorGame.DAL.Implementation\CarConstructorGame.DAL.Implementation.csproj", "{208659A2-5003-4594-AA75-16587D6B1AB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarConstructorGame.DAL.Implementation", "CarConstructorGame.DAL.Implementation\CarConstructorGame.DAL.Implementation.csproj", "{208659A2-5003-4594-AA75-16587D6B1AB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.UI", "CarConstructorGame.UI\CarConstructorGame.UI.csproj", "{A72F7815-BDDE-4510-AC26-6EC2345964B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarConstructorGame.UI", "CarConstructorGame.UI\CarConstructorGame.UI.csproj", "{A72F7815-BDDE-4510-AC26-6EC2345964B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.Models", "CarConstructorGame.Models\CarConstructorGame.Models.csproj", "{5371B433-B723-4EB3-AE39-7BA873D446DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarConstructorGame.Models", "CarConstructorGame.Models\CarConstructorGame.Models.csproj", "{5371B433-B723-4EB3-AE39-7BA873D446DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.BLL.Abstract", "CarConstructorGame.BLL.Abstract\CarConstructorGame.BLL.Abstract.csproj", "{D4C4FF83-86A0-4E5C-8669-8CAC500BED4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructorGame.BLL.Implementation", "CarConstructorGame.BLL.Implementation\CarConstructorGame.BLL.Implementation.csproj", "{C50681B7-DFA1-4A77-823E-CA85EFB6A324}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{5371B433-B723-4EB3-AE39-7BA873D446DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5371B433-B723-4EB3-AE39-7BA873D446DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5371B433-B723-4EB3-AE39-7BA873D446DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C4FF83-86A0-4E5C-8669-8CAC500BED4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C4FF83-86A0-4E5C-8669-8CAC500BED4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C4FF83-86A0-4E5C-8669-8CAC500BED4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C4FF83-86A0-4E5C-8669-8CAC500BED4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50681B7-DFA1-4A77-823E-CA85EFB6A324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50681B7-DFA1-4A77-823E-CA85EFB6A324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50681B7-DFA1-4A77-823E-CA85EFB6A324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50681B7-DFA1-4A77-823E-CA85EFB6A324}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
