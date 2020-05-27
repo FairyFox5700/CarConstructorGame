@@ -1,6 +1,10 @@
-﻿using System;
+﻿
+
+using CarConstructorGame.Entities;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Linq.Expressions;
 using static CarConstructorGame.Common.Enums;
 
 namespace CarConstructorGame.Models
@@ -15,48 +19,26 @@ namespace CarConstructorGame.Models
         public double TotalSum { get; set; }
         public string UserName { get; set; }
         public GameRating GameRating { get; set; }
-        public List <CarDto>  UserCars { get; set; }
-        public int UserAge  { get; set; }
-    }
-    public class CarDto
-    {
-        public int CarId { get; set; }
-        public CarDto()
+        public IEnumerable<CarDto> UserCars { get; set; } = new List<CarDto>();
+        public int UserAge { get; set; }
+
+        public static Expression<Func<User, UserDto>> Projection
         {
-            this.CarDetails = new List<DetailDto>();
+            get
+            {
+                return x => new UserDto()
+                {
+                    UserId = x.Id,
+                    UserName = x.UserName,
+                    GameRating = x.GameRating,
+                    TotalSum = x.MoneySum,
+                    UserAge = x.Age.Value,
+                    UserCars = x.Cars.AsQueryable().Select(CarDto.Projection)
+                };
+            }
         }
-        public bool IsMoving { get; set; }
-        public double Distance { get; set; }
-        public double TotalCost { get; set; }
-        public int UserId { get; set; }
-        public List<DetailDto> CarDetails { get; set; }
-    }
-
-    public abstract class DetailDto
-    {
-        public int DetailId { get; set; }
-        public bool IsSuitableForRepairing { get; set; }
-        public double RepairPrice { get; set; }
-        public double BuyPrice { get; set; }
-        public int CarId { get; set; }
-        public DetailType DetailType { get; set; }
-        public double ExpluatationStabilityCoeficicent { get; set; }
-    }
-    public class EngineDto: DetailDto
-    {
-        public double HorceForce { get; set; }
-        public double CubicCapability { get; set; }
-    }
-    public class RimsComplectDto: DetailDto
-    {
-        public int Count { get; set; }
-        public double Diameter { get; set; }
-    }
-
-    public class AccamulatorDto: DetailDto
-    {
-        public double Power { get; set; }
-        public TimeSpan HoursOfWork { get; set; }
     }
 
 }
+
+

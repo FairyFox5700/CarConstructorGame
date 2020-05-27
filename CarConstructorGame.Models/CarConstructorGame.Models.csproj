@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CarConstructorGame.Common\CarConstructorGame.Common.csproj" />
+    <ProjectReference Include="..\CarConstructorGame.Entities\CarConstructorGame.Entities.csproj" />
   </ItemGroup>
 
 </Project>
